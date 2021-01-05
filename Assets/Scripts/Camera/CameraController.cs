@@ -23,7 +23,7 @@ namespace RPG.CameraController.Base
         }
         void LateUpdate()
         {
-            Quaternion camTurnAngle = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * rotationSpeed, Vector3.up);
+            Quaternion camTurnAngle = Quaternion.AngleAxis(UltimateJoystick.GetHorizontalAxis("Rotate") * rotationSpeed, Vector3.up);
             offset = camTurnAngle * offset;
             transform.position = target.position - offset * currentZoom;
             transform.LookAt(target.position + Vector3.up * pitch);

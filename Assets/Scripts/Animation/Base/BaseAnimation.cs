@@ -10,5 +10,9 @@ namespace RPG.Animation.Base
         {
             animator.SetFloat("speedPercent", speedPercent, smoothTime, Time.deltaTime);
         }
+
+        public virtual void Attack() {
+            animator.SetTrigger("Attack");
+        }
     }
 }

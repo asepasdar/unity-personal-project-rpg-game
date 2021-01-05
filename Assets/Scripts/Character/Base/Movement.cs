@@ -10,7 +10,7 @@ namespace RPG.Movement.Base
     public class Movement : MonoBehaviour
     {
         NavMeshAgent agent;
-        BaseAnimation animator;
+        protected BaseAnimation animator;
         const float smoothTime = .1f;
         protected virtual void Start()
         {
@@ -34,8 +34,11 @@ namespace RPG.Movement.Base
             agent.stoppingDistance = radius * .5f;
         }
 
-        protected IEnumerator WaitUntilMove(Vector3 point) {
+
+
+        public IEnumerator WaitUntilMove(Vector3 point, float radius = 0f, System.Action callback = null) {
             bool _onSpot = false;
+            agent.stoppingDistance = radius;
             yield return new WaitUntil(() => {
                 while (!_onSpot)
                 {
@@ -44,13 +47,18 @@ namespace RPG.Movement.Base
                     {
                         if (agent.remainingDistance <= agent.stoppingDistance)
                         {
-                            if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f) _onSpot = true;
+                            if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+                            {
+                                _onSpot = true;
+                            }
                         }
                     }
                     return false;
                 }
                 return true;
             });
+
+            callback?.Invoke();
         }
     }
 }

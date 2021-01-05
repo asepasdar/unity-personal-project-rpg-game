@@ -34,7 +34,6 @@ namespace RPG.Interact.Base.Item
                     break;
             }
             if (result) Destroy(gameObject);
-            InventoryData.instance.ShowQty();
             return true;
         }
     }

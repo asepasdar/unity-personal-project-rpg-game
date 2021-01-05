@@ -1,5 +1,10 @@
 ﻿using UnityEngine;
 using RPG.Resources.Player;
+using RPG.Data.Inventory;
+using System.Collections.Generic;
+using RPG.Scriptable.Base.Equipment;
+using RPG.Scriptable.Base;
+using RPG.Inventory.Base.Slot;
 
 namespace RPG.Data.Player
 {
@@ -19,5 +24,8 @@ namespace RPG.Data.Player
         }
         #endregion
         public PlayerResources Resources;
+        public EquipmentManager Equipment;
+        public GameObject Player;
+        public bool IsOpenUI = false;
     }
 }

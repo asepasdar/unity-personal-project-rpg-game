@@ -9,11 +9,17 @@ namespace RPG.Inventory.Base.Slot {
         public Text Qty;
 
         ItemInfo item;
-        public void AddItem(ItemInfo newItem) {
-            item = newItem;
-            Icon.enabled = true;
-            Icon.sprite = item.Item.ItemIcon;
-            Qty.text = item.Qty > 1 ? item.Qty.ToString() : " ";
+        public void UpdateSlot(ItemInfo newItem) {
+            if (newItem != null && newItem.Qty != 0)
+            {
+                item = newItem;
+                Icon.enabled = true;
+                Icon.sprite = item.Item.ItemIcon;
+                Qty.text = item.Qty > 1 ? item.Qty.ToString() : " ";
+            }
+            else {
+                ClearSlot();
+            }
         }
 
         public void ClearSlot() {
@@ -24,7 +30,7 @@ namespace RPG.Inventory.Base.Slot {
         }
 
         public void OnClick() {
-            Debug.Log("Button On click");
+            if (item != null) InventoryData.instance.GetItem(item);
         }
     }
 }

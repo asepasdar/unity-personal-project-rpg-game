@@ -1,4 +1,5 @@
-﻿using RPG.Resources.UI;
+﻿using RPG.Data.Player;
+using RPG.Resources.UI;
 using System.Linq;
 using UnityEngine;
 
@@ -10,8 +11,9 @@ namespace RPG.Data.UI {
         public void ToggleInventory() {
             Resources.Inventory = Resources.Inventory.Select(s => { s.SetActive(!s.activeSelf); return s; }).ToList();
         }
-        public void ToggleDefaultUI() { 
+        public void ToggleDefaultUI() {
             Resources.Default = Resources.Default.Select(s => { s.SetActive(!s.activeSelf); return s; }).ToList();
+            PlayerData.instance.IsOpenUI = !Resources.Default[0].activeSelf;
         }
     } 
 }

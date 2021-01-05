@@ -12,14 +12,12 @@ namespace RPG.Interact.Base
 
         protected bool _isFocus = false;
 
-        private void Start()
+        protected virtual void Start()
         {
             SphereCollider col = GetComponent<SphereCollider>();
             col.radius = radius;
             col.isTrigger = true;
         }
-
-
 
         #region All Virtual Function
         protected virtual IEnumerator Interact() {

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ce37c899c6d9e479fbb818cd8c938e, type: 3}
+  m_Name: Novice Dagger
+  m_EditorClassIdentifier: 
+  ItemName: Novice Dagger
+  ItemIcon: {fileID: 21300000, guid: eb635773dd25234459ff918d02e5c305, type: 3}
+  ItemDescription: Lorem Ipsum is simply dummy text of the printing and typesetting
+    industry. Lorem Ipsum has been the industry's standard dummy text ever since
+    the 1500s, when an unknown printer took a galley of type and scrambled it to
+    make a type specimen book
+  ItemRarity: 0
+  ItemType: 1
+  ItemCost: 0
+  Str: 3
+  Agi: 2
+  Luck: 0
+  Def: 0
+  Slot: 5
+  Object: {fileID: 0}
