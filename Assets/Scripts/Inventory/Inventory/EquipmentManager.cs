@@ -1,4 +1,5 @@
 ﻿using RPG.Data.Inventory;
+using RPG.Data.Player;
 using RPG.Resources.Inventory;
 using RPG.Scriptable.Base;
 using RPG.Scriptable.Base.Equipment;
@@ -34,7 +35,7 @@ namespace RPG.Inventory.Base.Slot
         };
         InventoryData _inventory;
         int _selectedParam = 0;
-
+        GameObject _currentWeapon;
         void Start()
         {
             _inventory = InventoryData.instance;
@@ -94,12 +95,23 @@ namespace RPG.Inventory.Base.Slot
 
         private void UpdateUI(ItemEquipment equip, List<ItemEquipment> unequip)
         {
-            if (equip != null)
-                Icons[IndexSlot[equip.Slot]].sprite = equip.ItemIcon;
             foreach (ItemEquipment data in unequip) {
                 Icons[IndexSlot[data.Slot]].sprite = DefaultIcons[IndexSlot[data.Slot]];
                 if (data.Slot == EquipmentType.Shield && equip != null && equip.Slot == EquipmentType.TwoHandWeapon)
                     Icons[IndexSlot[data.Slot]].sprite = DefaultIcon;
+
+                if(data.Slot == EquipmentType.TwoHandWeapon)
+                {
+                    _currentWeapon = null;
+                    Destroy(_currentWeapon);
+                }
+                    
+            }
+            if (equip != null)
+            {
+                Icons[IndexSlot[equip.Slot]].sprite = equip.ItemIcon;
+                if (equip.Slot == EquipmentType.TwoHandWeapon)
+                    _currentWeapon = Instantiate(equip.Object, PlayerData.instance.Resources.WeaponPosition);
             }
         }
 

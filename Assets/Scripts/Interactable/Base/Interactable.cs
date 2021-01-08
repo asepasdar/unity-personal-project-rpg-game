@@ -5,6 +5,7 @@ using RPG.Data.Player;
 namespace RPG.Interact.Base
 {
     [RequireComponent(typeof(Collider))]
+    [RequireComponent(typeof(Outline))]
     public class Interactable : MonoBehaviour
     {
         public float radius = 3f;

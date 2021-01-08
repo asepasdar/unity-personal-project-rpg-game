@@ -21,9 +21,11 @@ MonoBehaviour:
   ItemRarity: 0
   ItemType: 1
   ItemCost: 0
+  Health: 0
+  Damage: 0
+  Def: 0
   Str: 3
   Agi: 2
   Luck: 0
-  Def: 0
   Slot: 5
   Object: {fileID: 0}

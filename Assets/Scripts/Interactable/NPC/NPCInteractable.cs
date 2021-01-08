@@ -5,32 +5,42 @@ namespace RPG.Interact.Base.NPC
 {
     public class NPCInteractable : Interactable
     {
+        Outline _outline;
         #region All Override Function
+        protected override void Start()
+        {
+            base.Start();
+            _outline = GetComponent<Outline>();
+            _outline.enabled = false;
+        }
         protected override IEnumerator Interact()
         {
             yield return base.Interact();
             Debug.Log("test");
         }
         protected override void OnTriggerEnter(Collider other) {
-            base.OnTriggerEnter(other);
+            if (other.gameObject.CompareTag("Player"))
+            {
+                OnFocus();
+            }
             //TODO : Show dialoge
         }
         protected override void OnTriggerExit(Collider other)
         {
-            base.OnTriggerExit(other);
-            //TODO : Hide dialoge
+            if (other.gameObject.CompareTag("Player"))
+            {
+                OnDefocus();
+            }
         }
         public override void OnFocus()
         {
             base.OnFocus();
-            Debug.Log("TODO : Set texture on NPC");
-            //TODO : Set Texture on NPC
+            _outline.enabled = true;
         }
 
         public override void OnDefocus() {
             base.OnDefocus();
-            Debug.Log("TODO : Remove texture on NPC");
-            //TODO : Remove texture on NPC
+            _outline.enabled = false;
         }
         #endregion
     }

@@ -57,7 +57,7 @@ namespace RPG.Movement.Base.Enemy
             {
                 while (_inAttackRadius)
                 {
-                    _myCombat.Attack(_targetStats, _target);
+                    _myCombat.Attack(_targetStats, _target, 1f);
                     return false;
                 }
                 return true;

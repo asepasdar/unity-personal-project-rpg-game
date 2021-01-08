@@ -12,7 +12,7 @@ namespace RPG.CameraController.Base
         public float maxZoom = 15f;
 
         public float pitch = 2f;
-        public float rotationSpeed = 2f;
+        public float rotationSpeed = 3f;
 
         float currentZoom = 5f;
 

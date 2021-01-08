@@ -15,7 +15,6 @@ namespace RPG.Stats.Base {
             damage = Mathf.Clamp(damage, 0, int.MaxValue);
 
             CurrentHealth -= damage;
-            Debug.Log(transform.name + " takes " + damage);
             if (CurrentHealth <= 0) {
                 Die();
             }
