@@ -20,9 +20,7 @@ namespace RPG.CameraController.Base
         {
             currentZoom -= Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
             currentZoom = Mathf.Clamp(currentZoom, minZoom, maxZoom);
-        }
-        void LateUpdate()
-        {
+
             Quaternion camTurnAngle = Quaternion.AngleAxis(UltimateJoystick.GetHorizontalAxis("Rotate") * rotationSpeed, Vector3.up);
             offset = camTurnAngle * offset;
             transform.position = target.position - offset * currentZoom;

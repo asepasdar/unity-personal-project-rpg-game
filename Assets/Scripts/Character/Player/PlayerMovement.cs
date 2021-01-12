@@ -6,7 +6,6 @@ using RPG.Data.Enemy;
 using RPG.Combat.Base;
 using System.Linq;
 using RPG.Stats.Base;
-using System.Collections;
 
 namespace RPG.Movement.Base.Player
 {
@@ -19,21 +18,24 @@ namespace RPG.Movement.Base.Player
         Interactable _interactTarget;
 
         bool _canControl = true;
+        bool _isAttacking = false;
+        public void Attack() {
+            _isAttacking = true;
+        }
         protected override void Start()
         {
             base.Start();
             _camMain = Camera.main;
             _cam = PlayerData.instance.Resources.PlayerMainCamera;
             _myCombat = PlayerData.instance.Player.GetComponent<CombatCharacter>();
-            
+            UpdateManager.instance.Movements.Add(this);
         }
 
-        // Update is called once per frame
-        protected override void FixedUpdate()
+        public override void FixedUpdateMe()
         {
             if (PlayerData.instance.IsOpenUI && EventSystem.current.IsPointerOverGameObject())
                 return;
-            if (Input.GetKeyDown(KeyCode.A) && _canControl) {
+            if (_isAttacking && _canControl) {
                 if (_interactTarget != null)
                 {
                     _interactTarget.OnDefocus();
@@ -55,7 +57,7 @@ namespace RPG.Movement.Base.Player
                     if(response)
                         _canControl = false;
                 }
-                
+                _isAttacking = false;
                 return;
             }
             if (Input.GetMouseButtonDown(0) && _canControl)
@@ -100,7 +102,7 @@ namespace RPG.Movement.Base.Player
                 MoveToPoint(destination);
             }
 
-            base.FixedUpdate();
+            base.FixedUpdateMe();
         }
     }
 }

@@ -18,7 +18,7 @@ namespace RPG.Movement.Base
             animator = GetComponent<BaseAnimation>();
         }
 
-        protected virtual void FixedUpdate() {
+        public virtual void FixedUpdateMe() {
             float speedPercent = agent.velocity.magnitude / agent.speed;
             animator.MovementAnimation(speedPercent, smoothTime, Time.deltaTime);
         }
@@ -33,8 +33,6 @@ namespace RPG.Movement.Base
             agent.SetDestination(point);
             agent.stoppingDistance = radius * .5f;
         }
-
-
 
         public IEnumerator WaitUntilMove(Vector3 point, float radius = 0f, System.Action callback = null) {
             bool _onSpot = false;

@@ -132,7 +132,7 @@ public class UltimateJoystickEditor : Editor
 
 		EditorGUILayout.LabelField( headerName, EditorStyles.boldLabel );
 		if( GUILayout.Button( EditorPrefs.GetBool( editorPref ) == true ? "Hide" : "Show", EditorStyles.miniButton, GUILayout.Width( 50 ), GUILayout.Height( 14f ) ) )
-			EditorPrefs.SetBool( editorPref, EditorPrefs.GetBool( editorPref ) == true ? false : true );
+			EditorPrefs.SetBool( editorPref, EditorPrefs.GetBool( editorPref ) != true );
 
 		GUILayout.EndHorizontal();
 		EditorGUILayout.EndVertical();
@@ -764,9 +764,11 @@ public class UltimateJoystickCreator
 
 	private static void CreateNewCanvas ( GameObject child )
 	{
-		GameObject root = new GameObject( "Ultimate UI Canvas" );
-		root.layer = LayerMask.NameToLayer( "UI" );
-		Canvas canvas = root.AddComponent<Canvas>();
+        GameObject root = new GameObject("Ultimate UI Canvas")
+        {
+            layer = LayerMask.NameToLayer("UI")
+        };
+        Canvas canvas = root.AddComponent<Canvas>();
 		canvas.renderMode = RenderMode.ScreenSpaceOverlay;
 		root.AddComponent<GraphicRaycaster>();
 		Undo.RegisterCreatedObjectUndo( root, "Create " + root.name );

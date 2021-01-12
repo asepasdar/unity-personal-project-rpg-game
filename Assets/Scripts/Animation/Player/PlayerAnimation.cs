@@ -41,6 +41,9 @@ namespace RPG.Animation.Base.Player
 
             if (equip != null && equip.Slot == EquipmentType.TwoHandWeapon)
                 SetAnmationClip(_animationData.Where(w => w.Type == IAnimationType.GreatSword).FirstOrDefault());
+            else if((equip != null && equip.Slot == EquipmentType.OneHandWeapon) || 
+                (equip != null && equip.Slot == EquipmentType.Shield))
+                SetAnmationClip(_animationData.Where(w => w.Type == IAnimationType.SwordShield).FirstOrDefault());
         }
     }
 }

@@ -7,6 +7,7 @@ namespace RPG.Resources.Player
         public Animator PlayerAnimator;
         public Transform PlayerMainCamera;
         public Transform WeaponPosition;
+        public Transform ShieldPosition;
 
         [Header("Health Settings")]
         public Transform HealthUICanvas;

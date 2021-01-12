@@ -151,6 +151,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   interactionSpot: {fileID: 6710965944445980273}
+  Movement: {fileID: 6370011948574432196}
+  Outline: {fileID: 6892665386588251339}
 --- !u!114 &6892665386588251339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,9 +166,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
+  outlineColor: {r: 1, g: 0, b: 0.11550188, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 1
   bakeKeys: []
   bakeValues: []
 --- !u!114 &8696672909685789872
@@ -195,7 +197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf52b243cef1b0408fff2b5e8323328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Radius: 10
+  Radius: 7
+  Mycombat: {fileID: 1877581664}
 --- !u!114 &6825247844624788937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,6 +225,8 @@ MonoBehaviour:
     Luck:
       Value: 1
   Target: {fileID: 8416823814290171900}
+  Outline: {fileID: 6892665386588251339}
+  Movement: {fileID: 6370011948574432196}
 --- !u!114 &1877581664
 MonoBehaviour:
   m_ObjectHideFlags: 0

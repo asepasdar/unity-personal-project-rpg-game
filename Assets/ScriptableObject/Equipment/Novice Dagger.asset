@@ -28,4 +28,4 @@ MonoBehaviour:
   Agi: 2
   Luck: 0
   Slot: 5
-  Object: {fileID: 0}
+  Object: {fileID: 8209479274853088978, guid: 65fdd8225af53c842a3aad44e418c817, type: 3}

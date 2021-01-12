@@ -12,8 +12,8 @@ namespace RPG.Movement.Base.Enemy
     public class EnemyMovement : Movement
     {
         public float Radius = 8f;
-
-        CombatCharacter _myCombat;
+        public CombatCharacter Mycombat;
+        
         BaseStats _targetStats;
         Transform _target;
         bool _inAttackRadius = false;
@@ -21,14 +21,14 @@ namespace RPG.Movement.Base.Enemy
         protected override void Start()
         {
             base.Start();
-            _myCombat = GetComponent<CombatCharacter>();
             _targetStats = PlayerData.instance.Player.GetComponent<BaseStats>();
             _target = PlayerData.instance.Player.GetComponent<Transform>();
             StartCoroutine(WaitAndChase());
         }
-        protected override void FixedUpdate()
+
+        public override void FixedUpdateMe()
         {
-            base.FixedUpdate();
+            base.FixedUpdateMe();
         }
 
         public void Chase(Vector3 target) {
@@ -57,7 +57,7 @@ namespace RPG.Movement.Base.Enemy
             {
                 while (_inAttackRadius)
                 {
-                    _myCombat.Attack(_targetStats, _target, 1f);
+                    Mycombat.Attack(_targetStats, _target, 1f);
                     return false;
                 }
                 return true;

@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using RPG.Interact.Base.NPC.Dialogue;
+using System.Collections;
 using UnityEngine;
 
 namespace RPG.Interact.Base.NPC
 {
     public class NPCInteractable : Interactable
     {
+        public DialogueText Dialogue;
+
         Outline _outline;
         #region All Override Function
         protected override void Start()
@@ -16,31 +19,30 @@ namespace RPG.Interact.Base.NPC
         protected override IEnumerator Interact()
         {
             yield return base.Interact();
-            Debug.Log("test");
+            DialogueManager.instance.StartDialogue(Dialogue);
         }
         protected override void OnTriggerEnter(Collider other) {
-            if (other.gameObject.CompareTag("Player"))
+            if (other.gameObject.CompareTag("Player") && _isFocus)
             {
-                OnFocus();
+                _outline.enabled = true;
+                StartCoroutine(Interact());
             }
-            //TODO : Show dialoge
         }
         protected override void OnTriggerExit(Collider other)
         {
             if (other.gameObject.CompareTag("Player"))
             {
                 OnDefocus();
+                _outline.enabled = false;
             }
         }
         public override void OnFocus()
         {
             base.OnFocus();
-            _outline.enabled = true;
         }
 
         public override void OnDefocus() {
             base.OnDefocus();
-            _outline.enabled = false;
         }
         #endregion
     }

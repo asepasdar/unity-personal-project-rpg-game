@@ -21,9 +21,11 @@ MonoBehaviour:
   ItemRarity: 0
   ItemType: 1
   ItemCost: 0
+  Health: 0
+  Damage: 0
+  Def: 5
   Str: 0
   Agi: 0
   Luck: 0
-  Def: 5
   Slot: 6
-  Object: {fileID: 0}
+  Object: {fileID: 764713271772324069, guid: 00cb134537ef1fb4383e1e11f13b2663, type: 3}

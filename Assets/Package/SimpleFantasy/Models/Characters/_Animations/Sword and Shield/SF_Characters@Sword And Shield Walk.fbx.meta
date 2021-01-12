@@ -1,0 +1,600 @@
+fileFormatVersion: 2
+guid: e61f1e455fea35f418e713cc573fbd80
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: -203655887218126122
+    second: Sword And Shield Walk
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: "Avatar Rig Configuration mis-match. Inbetween bone rotation
+      in configuration does not match rotation in animation file:\n\t'Shoulder_Right_jnt'
+      : rotation error = 9.457137 deg\n\t'Shoulder_Left_jnt' : rotation error = 23.066711
+      deg\n\t'Neck_jnt' : rotation error = 13.411249 deg\n"
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'mixamo.com' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Shoulder_Right_jnt' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'Shoulder_Left_jnt'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck_jnt'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Sword And Shield Walk
+      takeName: mixamo.com
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Hips_jnt
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperLeg_Left_jnt
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperLeg_Right_jnt
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerLeg_Left_jnt
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerLeg_Right_jnt
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Foot_Left_jnt
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Foot_Right_jnt
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine_jnt
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine_jnt1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head_jnt
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Arm_Left_jnt
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Arm_Right_jnt
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Forearm_Left_jnt
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Forearm_Right_jnt
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hand_Left_jnt
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hand_Right_jnt
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Toe_Left_jnt
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Toe_Right_jnt
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chest_jnt
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: SF_Characters@Sword And Shield Walk(Clone)
+      parentName: 
+      position: {x: -0.109613895, y: -0.017706603, z: 0.026411291}
+      rotation: {x: 0.025664274, y: 0.64674395, z: -0.038077544, w: 0.7613237}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Bartender
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Jester
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_PeasantWoman_01
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Princess
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Knight_01
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0.0000017547607, y: -0.0056631467, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_King
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Knight_Heavy_02
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Knight_Gladiator_Open
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Knight_Gladiator_Closed
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Bard
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Knight_Heavy_01
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Knight_ShieldMaiden
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Knight_Hood
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: 0.0000021362305, y: 0, z: 0.05413742}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Knight_Dark
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Knight_TinMan
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -5.684342e-16, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Knight_Templar
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Doctor
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Knight_03
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Executioner
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Wizard
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Knight_02
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_PeasantMan_01
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_GoblinFemale
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_GoblinWarrior
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Goblin_01
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_GoblinWitchDoctor
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Characters_GoblinHunter
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_GoblinKing
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Elf_Female
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Elf_Assassin
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Elf_King
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Elf_Knight
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Elf
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Undead_Rogue
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Undead_Footman_02
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Undead_Footman_01
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Undead_Skeleton
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Undead_Heavy
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SF_Character_Undead_King
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hips_jnt
+      parentName: SF_Characters@Sword And Shield Walk(Clone)
+      position: {x: 0.0011520255, y: 1.0924914, z: 0.009992793}
+      rotation: {x: 0.42771393, y: -0.46508387, z: -0.5208704, w: 0.57397896}
+      scale: {x: 1.0000132, y: 1.000015, z: 1.0000107}
+    - name: UpperLeg_Left_jnt
+      parentName: Hips_jnt
+      position: {x: 0.12891708, y: -0.221588, z: -0.017863873}
+      rotation: {x: -0.011695398, y: -0.00040234864, z: 0.99993145, w: 0.00046151894}
+      scale: {x: 1.000008, y: 1.0000105, z: 1.0000092}
+    - name: LowerLeg_Left_jnt
+      parentName: UpperLeg_Left_jnt
+      position: {x: -0.37452164, y: 1.0658141e-16, z: 0}
+      rotation: {x: -0.7075903, y: 0.000006591477, z: -0.000006080604, w: 0.7066231}
+      scale: {x: 1.0000132, y: 1.0000114, z: 0.99999994}
+    - name: Foot_Left_jnt
+      parentName: LowerLeg_Left_jnt
+      position: {x: -0.38874373, y: 5.162537e-17, z: 7.3425e-12}
+      rotation: {x: 0.5067455, y: 0.49426785, z: -0.50519735, w: 0.49364352}
+      scale: {x: 1.0000035, y: 0.99999994, z: 1.0000141}
+    - name: Toe_Left_jnt
+      parentName: Foot_Left_jnt
+      position: {x: -6.724043e-12, y: -0.1497335, z: 0.21969701}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999977, z: 0.99999887}
+    - name: UpperLeg_Right_jnt
+      parentName: Hips_jnt
+      position: {x: 0.12891664, y: 0.22158809, z: 0.01786388}
+      rotation: {x: -0.99990773, y: -0.0005809368, z: 0.0117084, w: -0.006858114}
+      scale: {x: 1.0000044, y: 1.0000044, z: 1.0000049}
+    - name: LowerLeg_Right_jnt
+      parentName: UpperLeg_Right_jnt
+      position: {x: 0.374522, y: 3.907985e-16, z: -1.0987456e-12}
+      rotation: {x: 0.70411, y: 0.00003102547, z: -0.00005180016, w: -0.71009094}
+      scale: {x: 1.0000134, y: 1.0000068, z: 1.0000004}
+    - name: Foot_Right_jnt
+      parentName: LowerLeg_Right_jnt
+      position: {x: 0.388744, y: 8.197104e-12, z: -3.6907612e-11}
+      rotation: {x: 0.4958342, y: 0.50672746, z: -0.4927326, w: 0.5045695}
+      scale: {x: 1.0000068, y: 1.0000209, z: 1.0000061}
+    - name: Toe_Right_jnt
+      parentName: Foot_Right_jnt
+      position: {x: -0.000003490797, y: 0.1497333, z: -0.21969701}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 0.99999803, y: 0.99998707, z: 0.9999959}
+    - name: Spine_jnt
+      parentName: Hips_jnt
+      position: {x: -0.019048661, y: -5.158743e-16, z: 6.2692085e-18}
+      rotation: {x: -0.000000021073427, y: -0.000000021073427, z: 0.000000059604645,
+        w: 1}
+      scale: {x: 1.0000024, y: 1.0000045, z: 1.0000011}
+    - name: Spine_jnt1
+      parentName: Spine_jnt
+      position: {x: -0.3360725, y: 3.7261742e-16, z: 2.3643465e-18}
+      rotation: {x: -6.5854344e-10, y: -0.000000042805397, z: 0.00000002980232, w: 1}
+      scale: {x: 1.0000091, y: 1.000007, z: 1.0000024}
+    - name: Chest_jnt
+      parentName: Spine_jnt1
+      position: {x: -0.33425274, y: -1.2999511e-15, z: -2.3643465e-18}
+      rotation: {x: 6.585447e-10, y: 0.000000042805393, z: 1.7763568e-15, w: 1}
+      scale: {x: 1.0000143, y: 1.000012, z: 1.0000095}
+    - name: Shoulder_Right_jnt
+      parentName: Chest_jnt
+      position: {x: -0.21910845, y: 0.27274165, z: -0.0076430403}
+      rotation: {x: 0.70710677, y: -0.7071068, z: -0.000000035803446, w: -0.000000044290303}
+      scale: {x: 1.0000012, y: 0.9999997, z: 0.99999887}
+    - name: Arm_Right_jnt
+      parentName: Shoulder_Right_jnt
+      position: {x: -0.29249033, y: 1.7053025e-15, z: -0.0076430403}
+      rotation: {x: 0.0000000037252885, y: -7.1054274e-15, z: -0, w: 1}
+      scale: {x: 1.0000168, y: 0.99999994, z: 1.0000132}
+    - name: Forearm_Right_jnt
+      parentName: Arm_Right_jnt
+      position: {x: -0.47118998, y: -6.252776e-15, z: 5.1310176e-17}
+      rotation: {x: -0.00000006519257, y: 0.00000008940697, z: -3.330663e-16, w: 1}
+      scale: {x: 1.0000201, y: 0.999996, z: 1.0000113}
+    - name: Hand_Right_jnt
+      parentName: Forearm_Right_jnt
+      position: {x: -0.4403, y: -8.81073e-15, z: 4.7946412e-17}
+      rotation: {x: -0, y: 1, z: -7.1054274e-15, w: -7.1054274e-15}
+      scale: {x: 1.0000118, y: 0.99999994, z: 1.0000094}
+    - name: Shoulder_Left_jnt
+      parentName: Chest_jnt
+      position: {x: -0.21910845, y: -0.27274165, z: 0.0076430403}
+      rotation: {x: 0.70710677, y: -0.7071068, z: -0.00000003843762, w: 4.907257e-10}
+      scale: {x: 1.0000056, y: 0.99999994, z: 0.9999997}
+    - name: Arm_Left_jnt
+      parentName: Shoulder_Left_jnt
+      position: {x: 0.29249033, y: 2.2737367e-15, z: 0.0076430403}
+      rotation: {x: 1, y: -0, z: -0.00000004505272, w: -0.0000000037252899}
+      scale: {x: 1.0000087, y: 1.0000128, z: 1.0000087}
+    - name: Forearm_Left_jnt
+      parentName: Arm_Left_jnt
+      position: {x: 0.471188, y: -2.842171e-16, z: 5.1165055e-17}
+      rotation: {x: 0.000000014901161, y: -2.3283062e-10, z: -6.7047046e-16, w: 1}
+      scale: {x: 1.0000141, y: 1.0000155, z: 1.0000062}
+    - name: Hand_Left_jnt
+      parentName: Forearm_Left_jnt
+      position: {x: 0.4403, y: 0, z: 4.781051e-17}
+      rotation: {x: 2.6454557e-16, y: -1, z: 1.7763566e-15, w: -0.000000014202675}
+      scale: {x: 1.0000124, y: 1.0000157, z: 1.000012}
+    - name: Neck_jnt
+      parentName: Chest_jnt
+      position: {x: -0.22895189, y: 4.2216863e-16, z: 5.667284e-19}
+      rotation: {x: -0, y: 3.5527137e-15, z: -0.000000029802322, w: 1}
+      scale: {x: 1.0000024, y: 1.0000044, z: 0.9999991}
+    - name: Head_jnt
+      parentName: Neck_jnt
+      position: {x: -0.08167417, y: -5.9802247e-16, z: -5.667284e-19}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000023, y: 1.0000037, z: 1.0000001}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,17 +10,13 @@ namespace RPG.Combat.Base {
         BaseStats MyStats;
         BaseAnimation anim;
         float attackColdown = 0f;
-        float attackDelay = 1f;
+        readonly float attackDelay = 1f;
         private void Start()
         {
             MyStats = GetComponent<BaseStats>();
             anim = GetComponent<BaseAnimation>();
         }
 
-        private void Update()
-        {
-            attackColdown -= Time.deltaTime;
-        }
 
         public bool Attack(BaseStats target, Transform faceTo, float distance, System.Action callback = null) {
             bool response = false;
@@ -43,11 +39,21 @@ namespace RPG.Combat.Base {
             yield return new WaitForSeconds(delay);
             target.TakeDamage(MyStats.Stats.Damage);
             callback?.Invoke();
+            StartCoroutine(Decrease());
         }
 
         IEnumerator NoTarget(float delay, System.Action callback = null) {
             yield return new WaitForSeconds(delay);
             callback?.Invoke();
+            StartCoroutine(Decrease());
+        }
+
+        IEnumerator Decrease() {
+            yield return new WaitUntil(() => {
+                if (attackColdown > 0)
+                    attackColdown -= Time.deltaTime;
+                return attackColdown <= 0;
+            });
         }
     } 
 }

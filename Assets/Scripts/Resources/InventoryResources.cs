@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace RPG.Resources.Inventory
@@ -7,12 +8,13 @@ namespace RPG.Resources.Inventory
     {
         [Header("Resources Item Info")]
         public Image InfoIcon;
-        public Text InfoName;
-        public Text InfoDescription;
+        public TextMeshProUGUI InfoName;
+        public TextMeshProUGUI InfoDescription;
 
         [Header("Resources Item Action")]
         public Button ActionEquip;
         public Button ActionRemove;
         public Button ActionUnequip;
+
     }
 }

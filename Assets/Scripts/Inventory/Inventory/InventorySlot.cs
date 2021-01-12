@@ -1,12 +1,13 @@
 ﻿using UnityEngine.UI;
 using UnityEngine;
 using RPG.Data.Inventory;
+using TMPro;
 
 namespace RPG.Inventory.Base.Slot {
     public class InventorySlot : MonoBehaviour
     {
         public Image Icon;
-        public Text Qty;
+        public TextMeshProUGUI Qty;
 
         ItemInfo item;
         public void UpdateSlot(ItemInfo newItem) {

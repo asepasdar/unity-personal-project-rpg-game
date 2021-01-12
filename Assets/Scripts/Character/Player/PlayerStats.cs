@@ -13,12 +13,6 @@ namespace RPG.Stats.Base.Player
             InventoryData.instance.onEquipmentCallback += OnEquipmentChanged;
         }
 
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.T))
-                TakeDamage(Stats.Damage);
-        }
-
         public override void TakeDamage(int damage)
         {
             base.TakeDamage(damage);

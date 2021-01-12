@@ -35,7 +35,7 @@ namespace RPG.Inventory.Base.Slot
         };
         InventoryData _inventory;
         int _selectedParam = 0;
-        GameObject _currentWeapon;
+        GameObject _currentWeapon, _currentShield;
         void Start()
         {
             _inventory = InventoryData.instance;
@@ -100,18 +100,25 @@ namespace RPG.Inventory.Base.Slot
                 if (data.Slot == EquipmentType.Shield && equip != null && equip.Slot == EquipmentType.TwoHandWeapon)
                     Icons[IndexSlot[data.Slot]].sprite = DefaultIcon;
 
-                if(data.Slot == EquipmentType.TwoHandWeapon)
+                if (data.Slot == EquipmentType.TwoHandWeapon || data.Slot == EquipmentType.OneHandWeapon)
                 {
-                    _currentWeapon = null;
                     Destroy(_currentWeapon);
+                    _currentWeapon = null;
+                }
+                else if (data.Slot == EquipmentType.Shield) {
+                    Destroy(_currentShield);
+                    _currentShield = null;
                 }
                     
             }
             if (equip != null)
             {
                 Icons[IndexSlot[equip.Slot]].sprite = equip.ItemIcon;
-                if (equip.Slot == EquipmentType.TwoHandWeapon)
+                if (equip.Slot == EquipmentType.TwoHandWeapon || equip.Slot == EquipmentType.OneHandWeapon)
                     _currentWeapon = Instantiate(equip.Object, PlayerData.instance.Resources.WeaponPosition);
+                else if(equip.Slot == EquipmentType.Shield)
+                    _currentShield = Instantiate(equip.Object, PlayerData.instance.Resources.ShieldPosition);
+
             }
         }
 
