@@ -30,31 +30,30 @@ namespace RPG.Inventory.Base.Slot
         }
 
         void ShowInfo(ItemInfo item, int index) {
-            InventoryResources resources = InventoryData.instance.Resources;
-            resources.InfoIcon.enabled = true;
-            resources.InfoIcon.sprite = item.Item.ItemIcon;
-            resources.InfoName.text = item.Item.ItemName;
-            resources.InfoDescription.text = item.Item.ItemDescription;
 
-            resources.ActionUnequip.gameObject.SetActive(false);
-            resources.ActionEquip.gameObject.SetActive(true);
+            _inven.Resources.InfoIcon.enabled = true;
+            _inven.Resources.InfoIcon.sprite = item.Item.ItemIcon;
+            _inven.Resources.InfoName.text = item.Item.ItemName;
+            _inven.Resources.InfoDescription.text = item.Item.ItemDescription;
 
-            resources.ActionRemove.interactable = true;
-            resources.ActionEquip.interactable = item.Item.ItemType == IType.Equipment;
+            _inven.Resources.ActionUnequip.gameObject.SetActive(false);
+            _inven.Resources.ActionEquip.gameObject.SetActive(true);
+
+            _inven.Resources.ActionRemove.interactable = true;
+            _inven.Resources.ActionEquip.interactable = item.Item.ItemType == IType.Equipment;
 
             _selectedIndex = index;
             _selectedItem = item;
         }
 
         void ClearInfo() {
-            InventoryResources resources = InventoryData.instance.Resources;
-            resources.InfoIcon.enabled = false;
-            resources.InfoIcon.sprite = null;
-            resources.InfoName.text = "-";
-            resources.InfoDescription.text = "";
+            _inven.Resources.InfoIcon.enabled = false;
+            _inven.Resources.InfoIcon.sprite = null;
+            _inven.Resources.InfoName.text = "-";
+            _inven.Resources.InfoDescription.text = "";
 
-            resources.ActionRemove.interactable = false;
-            resources.ActionEquip.interactable = false;
+            _inven.Resources.ActionRemove.interactable = false;
+            _inven.Resources.ActionEquip.interactable = false;
 
             _selectedItem = null;
             _selectedIndex = -1;

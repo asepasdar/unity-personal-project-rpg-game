@@ -6,11 +6,14 @@ using RPG.Data.Enemy;
 using RPG.Combat.Base;
 using System.Linq;
 using RPG.Stats.Base;
+using RPG.Scriptable.Base.Event.Position;
 
 namespace RPG.Movement.Base.Player
 {
     public class PlayerMovement : Movement
     {
+        public EventPosition ChannelPosition;
+
         CombatCharacter _myCombat;
         Camera _camMain;
         Transform _cam;
@@ -28,7 +31,12 @@ namespace RPG.Movement.Base.Player
             _camMain = Camera.main;
             _cam = PlayerData.instance.Resources.PlayerMainCamera;
             _myCombat = PlayerData.instance.Player.GetComponent<CombatCharacter>();
+            ChannelPosition.Channel += SetMyPosition;
             UpdateManager.instance.Movements.Add(this);
+        }
+
+        void SetMyPosition(Vector3 position) {
+            agent.Warp(position);
         }
 
         public override void FixedUpdateMe()

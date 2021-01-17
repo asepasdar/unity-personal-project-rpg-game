@@ -90,8 +90,12 @@ public class Outline : MonoBehaviour {
     // Apply material properties immediately
     needsUpdate = true;
   }
+    private void Start()
+    {
+        UpdateManager.instance.Outlines.Add(this);
+    }
 
-  void OnEnable() {
+    void OnEnable() {
     foreach (var renderer in renderers) {
 
       // Append outline shaders
@@ -143,7 +147,7 @@ public class Outline : MonoBehaviour {
   }
 
   void OnDestroy() {
-
+    UpdateManager.instance.Outlines.Remove(this);
     // Destroy material instances
     Destroy(outlineMaskMaterial);
     Destroy(outlineFillMaterial);

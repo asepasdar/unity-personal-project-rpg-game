@@ -4,12 +4,17 @@ using RPG.Scriptable.Base;
 using RPG.Scriptable.Base.Loot;
 using RPG.Scriptable.Base.Equipment;
 using RPG.Data.Inventory;
+using RPG.Scriptable.Base.Event.Audio;
 
 namespace RPG.Interact.Base.Item
 {
     public class ItemInteractable : Interactable
     {
         public BaseItem Item;
+        public AudioClip ClipEffect;
+
+        [Header("Event Channel")]
+        public EventAudio AudioChannel;
         protected override IEnumerator Interact()
         {
             yield return new WaitUntil(() => PickUp());
@@ -21,19 +26,12 @@ namespace RPG.Interact.Base.Item
         }
 
         bool PickUp() {
-            bool result;
-            switch (Item.ItemType) {
-                case IType.Equipment:
-                    ItemEquipment equipment = (ItemEquipment)Item;
-                    result = InventoryData.instance.Add(equipment);
-                    break;
-
-                default:
-                    ItemLoot loot = (ItemLoot)Item;
-                    result = InventoryData.instance.Add(loot);
-                    break;
+            bool result = InventoryData.instance.Add(Item);
+            if (result)
+            {
+                AudioChannel.RaiseEvent(ClipEffect);
+                Destroy(gameObject);
             }
-            if (result) Destroy(gameObject);
             return true;
         }
     }

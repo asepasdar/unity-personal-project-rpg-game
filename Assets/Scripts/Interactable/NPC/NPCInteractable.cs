@@ -1,4 +1,5 @@
 ﻿using RPG.Interact.Base.NPC.Dialogue;
+using RPG.Scriptable.Base.Event.Audio;
 using System.Collections;
 using UnityEngine;
 
@@ -7,13 +8,11 @@ namespace RPG.Interact.Base.NPC
     public class NPCInteractable : Interactable
     {
         public DialogueText Dialogue;
-
-        Outline _outline;
+        public Outline _outline;
         #region All Override Function
         protected override void Start()
         {
             base.Start();
-            _outline = GetComponent<Outline>();
             _outline.enabled = false;
         }
         protected override IEnumerator Interact()

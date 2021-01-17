@@ -1,5 +1,6 @@
 ﻿using RPG.Animation.Base.Enemy;
 using RPG.Combat.Base;
+using RPG.Data.Enemy;
 using RPG.Data.Player;
 using RPG.Stats.Base;
 using System.Collections;
@@ -23,6 +24,8 @@ namespace RPG.Movement.Base.Enemy
             base.Start();
             _targetStats = PlayerData.instance.Player.GetComponent<BaseStats>();
             _target = PlayerData.instance.Player.GetComponent<Transform>();
+            UpdateManager.instance.Movements.Add(this);
+            EnemyData.instance.Enemies.Add(transform);
             StartCoroutine(WaitAndChase());
         }
 
@@ -65,14 +68,19 @@ namespace RPG.Movement.Base.Enemy
             StartCoroutine(WaitAndChase());
         }
 
-        public void ChangeState() {
-            _inAttackRadius = !_inAttackRadius;
+        public void ChangeState(bool status) {
+            _inAttackRadius = status;
         }
 
         void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, Radius);
+        }
+
+        private void OnDestroy()
+        {
+            UpdateManager.instance.Movements.Remove(this);
         }
     }
 }

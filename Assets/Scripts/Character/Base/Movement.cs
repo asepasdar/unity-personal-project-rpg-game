@@ -9,7 +9,7 @@ namespace RPG.Movement.Base
     [RequireComponent(typeof(BaseAnimation))]
     public class Movement : MonoBehaviour
     {
-        NavMeshAgent agent;
+        protected NavMeshAgent agent;
         protected BaseAnimation animator;
         const float smoothTime = .1f;
         protected virtual void Start()

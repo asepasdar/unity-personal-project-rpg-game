@@ -126,16 +126,14 @@ namespace RPG.Inventory.Base.Slot
         {
             if (MySlot[_selectedParam] != null)
             {
-                InventoryResources resources = _inventory.Resources;
+                _inventory.Resources.InfoIcon.enabled = true;
+                _inventory.Resources.InfoIcon.sprite = MySlot[_selectedParam].ItemIcon;
+                _inventory.Resources.InfoName.text = MySlot[_selectedParam].ItemName;
+                _inventory.Resources.InfoDescription.text = MySlot[_selectedParam].ItemDescription;
 
-                resources.InfoIcon.enabled = true;
-                resources.InfoIcon.sprite = MySlot[_selectedParam].ItemIcon;
-                resources.InfoName.text = MySlot[_selectedParam].ItemName;
-                resources.InfoDescription.text = MySlot[_selectedParam].ItemDescription;
-
-                resources.ActionUnequip.gameObject.SetActive(true);
-                resources.ActionEquip.gameObject.SetActive(false);
-                resources.ActionRemove.interactable = false;
+                _inventory.Resources.ActionUnequip.gameObject.SetActive(true);
+                _inventory.Resources.ActionEquip.gameObject.SetActive(false);
+                _inventory.Resources.ActionRemove.interactable = false;
 
             }
         }

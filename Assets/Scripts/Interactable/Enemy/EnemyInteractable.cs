@@ -17,14 +17,14 @@ namespace RPG.Interact.Base.Enemy
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                Movement.ChangeState();
+                Movement.ChangeState(true);
             }
         }
         protected override void OnTriggerExit(Collider other)
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                Movement.ChangeState();
+                Movement.ChangeState(false);
                 Outline.enabled = false;
                 OnDefocus();
                 

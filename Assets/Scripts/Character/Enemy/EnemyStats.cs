@@ -9,26 +9,20 @@ namespace RPG.Stats.Base.Enemy
     public class EnemyStats : BaseStats
     {
         public Transform Target;
-        public Outline Outline;
-        public Movement.Base.Movement Movement;
 
         PlayerResources _resources;
-        UpdateManager _updateManager;
         Transform _cam;
         Transform _ui;
         Image _healthSlider;
         void Start()
         {
-            _updateManager = UpdateManager.instance;
             _resources = PlayerData.instance.Resources;
 
             _cam = _resources.PlayerMainCamera;
             _ui = Instantiate(_resources.HealthBarPrefab, _resources.HealthUICanvas).transform;
             _healthSlider = _ui.GetChild(0).GetComponent<Image>();
 
-            _updateManager.Outlines.Add(Outline);
-            _updateManager.Enemies.Add(this);
-            _updateManager.Movements.Add(Movement);
+            UpdateManager.instance.Enemies.Add(this);
         }
 
         public void UpdateMe()
@@ -51,9 +45,7 @@ namespace RPG.Stats.Base.Enemy
             base.Die();
             Destroy(_ui.gameObject);
             EnemyData.instance.Enemies.Remove(transform);
-            _updateManager.Enemies.Remove(this);
-            _updateManager.Outlines.Remove(Outline);
-            _updateManager.Movements.Remove(Movement);
+            UpdateManager.instance.Enemies.Remove(this);
             Destroy(gameObject);
         }
     }
