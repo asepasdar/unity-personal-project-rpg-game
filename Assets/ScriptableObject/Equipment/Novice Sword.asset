@@ -22,7 +22,7 @@ MonoBehaviour:
   ItemType: 1
   ItemCost: 0
   Health: 0
-  Damage: 5
+  Damage: 10
   Def: 0
   Str: 0
   Agi: 0

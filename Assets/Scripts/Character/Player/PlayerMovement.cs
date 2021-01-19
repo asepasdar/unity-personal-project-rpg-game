@@ -68,7 +68,7 @@ namespace RPG.Movement.Base.Player
                 _isAttacking = false;
                 return;
             }
-            if (Input.GetMouseButtonDown(0) && _canControl)
+            if (Input.GetMouseButtonDown(0) && _canControl && !PlayerData.instance.IsOpenUI)
             {
                 if (_interactTarget != null)
                 {
@@ -89,11 +89,7 @@ namespace RPG.Movement.Base.Player
 
             if ( (UltimateJoystick.GetHorizontalAxis("Movement") != 0 || UltimateJoystick.GetVerticalAxis("Movement") != 0) 
                 && _canControl) {
-                if (_interactTarget != null)
-                {
-                    _interactTarget.OnDefocus();
-                    _interactTarget = null;
-                }
+                _interactTarget = null;
                 
                 _input = new Vector2(UltimateJoystick.GetHorizontalAxis("Movement"), UltimateJoystick.GetVerticalAxis("Movement"));
                 _input = Vector2.ClampMagnitude(_input, 1);

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Novice Dagger
   m_EditorClassIdentifier: 
   ItemName: Novice Dagger
-  ItemIcon: {fileID: 21300000, guid: eb635773dd25234459ff918d02e5c305, type: 3}
+  ItemIcon: {fileID: 21300000, guid: eabdfc1e8323c45409f153e5480dfe75, type: 3}
   ItemDescription: Lorem Ipsum is simply dummy text of the printing and typesetting
     industry. Lorem Ipsum has been the industry's standard dummy text ever since
     the 1500s, when an unknown printer took a galley of type and scrambled it to
@@ -22,7 +22,7 @@ MonoBehaviour:
   ItemType: 1
   ItemCost: 0
   Health: 0
-  Damage: 0
+  Damage: 5
   Def: 0
   Str: 3
   Agi: 2

@@ -24,6 +24,7 @@ public class SceneLoader : MonoBehaviour
             }
             return true;
         });
+        yield return new WaitForSecondsRealtime(2.5f);
         UIData.instance.Resources.LoadingScreen.SetActive(false);
     }
 }

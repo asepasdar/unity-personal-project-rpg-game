@@ -16,7 +16,7 @@ namespace RPG.Inventory.Base.Slot {
                 item = newItem;
                 Icon.enabled = true;
                 Icon.sprite = item.Item.ItemIcon;
-                Qty.text = item.Qty > 1 ? item.Qty.ToString() : " ";
+                Qty.text = item.Qty > 1 ? item.Qty.ToString() : "-";
             }
             else {
                 ClearSlot();
@@ -27,7 +27,7 @@ namespace RPG.Inventory.Base.Slot {
             item = null;
             Icon.enabled = false;
             Icon.sprite = null;
-            Qty.text = " ";
+            Qty.text = "-";
         }
 
         public void OnClick() {

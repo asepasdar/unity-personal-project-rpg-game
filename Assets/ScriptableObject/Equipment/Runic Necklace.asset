@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Runic Necklace
   m_EditorClassIdentifier: 
   ItemName: Runic Necklace
-  ItemIcon: {fileID: 21300000, guid: 4e90e810792fff34d91b52b8af0d6f49, type: 3}
+  ItemIcon: {fileID: 21300000, guid: 0f304bf239161594b81719262458c600, type: 3}
   ItemDescription: Lorem Ipsum is simply dummy text of the printing and typesetting
     industry. Lorem Ipsum has been the industry's standard dummy text ever since
     the 1500s, when an unknown printer took a galley of type and scrambled it to
@@ -21,9 +21,11 @@ MonoBehaviour:
   ItemRarity: 2
   ItemType: 1
   ItemCost: 200
+  Health: 0
+  Damage: 0
+  Def: 10
   Str: 0
   Agi: 0
   Luck: 10
-  Def: 10
   Slot: 3
   Object: {fileID: 0}

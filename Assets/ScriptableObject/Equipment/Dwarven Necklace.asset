@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dwarven Necklace
   m_EditorClassIdentifier: 
   ItemName: Dwarven Necklace
-  ItemIcon: {fileID: 21300000, guid: cab6ffb8ab3fc8045bf7fa55c42f8a01, type: 3}
+  ItemIcon: {fileID: 21300000, guid: 830527809e70d844f8ca6f7995ea4f5e, type: 3}
   ItemDescription: Lorem Ipsum is simply dummy text of the printing and typesetting
     industry. Lorem Ipsum has been the industry's standard dummy text ever since
     the 1500s, when an unknown printer took a galley of type and scrambled it to
@@ -21,9 +21,11 @@ MonoBehaviour:
   ItemRarity: 1
   ItemType: 1
   ItemCost: 100
+  Health: 0
+  Damage: 0
+  Def: 0
   Str: 0
   Agi: 0
   Luck: 10
-  Def: 0
   Slot: 3
   Object: {fileID: 0}

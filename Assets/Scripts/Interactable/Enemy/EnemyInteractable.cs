@@ -27,7 +27,6 @@ namespace RPG.Interact.Base.Enemy
                 Movement.ChangeState(false);
                 Outline.enabled = false;
                 OnDefocus();
-                
             }
         }
 
