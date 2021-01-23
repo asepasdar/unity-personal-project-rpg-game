@@ -23,8 +23,8 @@ namespace RPG.Combat.Base {
             if (attackColdown <= 0) {
                 response = true;
                 transform.LookAt(faceTo);
-                float animSpeed = (3f / MyStats.Stats.AttackSpeed) / 2;
-                attackColdown = animSpeed * 2;
+                float animSpeed = (2f / MyStats.Stats.AttackSpeed) / 2;
+                attackColdown = animSpeed * 1.5f;
                 anim.Attack(animSpeed);
                 if (distance < 4f)
                     StartCoroutine(DoDamage(target, attackDelay, callback));

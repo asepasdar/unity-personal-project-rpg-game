@@ -22,16 +22,13 @@ namespace RPG.Animation.Base
             animator.runtimeAnimatorController = animatorOverrideController;
         }
 
-        protected void SetAnmationClip(AnimationSet anim)
+        protected virtual void SetAnmationClip(AnimationSet anim)
         {
-            if (anim != null)
-            {
-                _currentSet = anim;
-                animatorOverrideController["Idle"] = anim.Clips.Idle;
-                animatorOverrideController["Walk_Static"] = anim.Clips.Walk;
-                animatorOverrideController["Run_Static"] = anim.Clips.Run;
-                animatorOverrideController["Punch"] = anim.Clips.Attack;
-            }
+            _currentSet = anim;
+            animatorOverrideController["Idle"] = anim.Clips.Idle;
+            animatorOverrideController["Walk_Static"] = anim.Clips.Walk;
+            animatorOverrideController["Run_Static"] = anim.Clips.Run;
+            animatorOverrideController["Punch"] = anim.Clips.Attack;
         }
     }
 }

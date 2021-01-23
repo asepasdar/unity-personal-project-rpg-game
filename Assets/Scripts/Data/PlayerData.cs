@@ -26,6 +26,5 @@ namespace RPG.Data.Player
         public PlayerResources Resources;
         public EquipmentManager Equipment;
         public GameObject Player;
-        public bool IsOpenUI = false;
     }
 }

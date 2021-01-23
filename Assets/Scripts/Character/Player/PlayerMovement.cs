@@ -7,12 +7,15 @@ using RPG.Combat.Base;
 using System.Linq;
 using RPG.Stats.Base;
 using RPG.Scriptable.Base.Event.Position;
+using RPG.Scriptable.Base.Event.Boolean;
 
 namespace RPG.Movement.Base.Player
 {
     public class PlayerMovement : Movement
     {
+        [Header("Listening Channel")]
         public EventPosition ChannelPosition;
+        public EventBool ChannelOpenUI;
 
         CombatCharacter _myCombat;
         Camera _camMain;
@@ -22,6 +25,7 @@ namespace RPG.Movement.Base.Player
 
         bool _canControl = true;
         bool _isAttacking = false;
+        bool _isOpenUI = false;
         public void Attack() {
             _isAttacking = true;
         }
@@ -31,17 +35,23 @@ namespace RPG.Movement.Base.Player
             _camMain = Camera.main;
             _cam = PlayerData.instance.Resources.PlayerMainCamera;
             _myCombat = PlayerData.instance.Player.GetComponent<CombatCharacter>();
-            ChannelPosition.Channel += SetMyPosition;
             UpdateManager.instance.Movements.Add(this);
+
+            ChannelPosition.Channel += SetMyPosition;
+            ChannelOpenUI.Channel += ChangeState;
         }
 
         void SetMyPosition(Vector3 position) {
             agent.Warp(position);
         }
 
+        void ChangeState(bool status) {
+            _isOpenUI = !status;
+        }
+
         public override void FixedUpdateMe()
         {
-            if (PlayerData.instance.IsOpenUI && EventSystem.current.IsPointerOverGameObject())
+            if (_isOpenUI && EventSystem.current.IsPointerOverGameObject())
                 return;
             if (_isAttacking && _canControl) {
                 if (_interactTarget != null)
@@ -68,7 +78,7 @@ namespace RPG.Movement.Base.Player
                 _isAttacking = false;
                 return;
             }
-            if (Input.GetMouseButtonDown(0) && _canControl && !PlayerData.instance.IsOpenUI)
+            if (Input.GetMouseButtonDown(0) && _canControl && !_isOpenUI)
             {
                 if (_interactTarget != null)
                 {

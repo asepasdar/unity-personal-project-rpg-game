@@ -1,5 +1,5 @@
-﻿using RPG.Data.Player;
-using RPG.Resources.UI;
+﻿using RPG.Resources.UI;
+using RPG.Scriptable.Base.Event.Boolean;
 using System.Linq;
 using UnityEngine;
 
@@ -7,25 +7,36 @@ namespace RPG.Data.UI {
     public class UIData : MonoBehaviour
     {
         public UIResources Resources;
+
+        [Header("Listening Channel")]
+        public EventBool ChannelInventory;
+        public EventBool ChannelEquipment;
+        public EventBool ChannelItemInfo;
+        public EventBool ChannelLoading;
+
         #region Singleton
-        public static UIData instance;
         private void Awake()
         {
-            if (instance != null)
-            {
-                Debug.LogWarning("More than one EnemyData instance");
-                return;
-            }
-            instance = this;
+            ChannelInventory.Channel += ToggleInventory;
+            ChannelEquipment.Channel += ToggleEquipment;
+            ChannelItemInfo.Channel += ToggleItemInfo;
+            ChannelLoading.Channel += ToggleLoading;
         }
         #endregion
 
-        public void ToggleInventory() {
-            Resources.Inventory = Resources.Inventory.Select(s => { s.SetActive(!s.activeSelf); return s; }).ToList();
+        void ToggleInventory(bool status) {
+            Resources.Inventory.SetActive(status);
         }
-        public void ToggleDefaultUI() {
-            Resources.Default = Resources.Default.Select(s => { s.SetActive(!s.activeSelf); return s; }).ToList();
-            PlayerData.instance.IsOpenUI = !Resources.Default[0].activeSelf;
+        void ToggleItemInfo(bool status)
+        {
+            Resources.ItemInfo.SetActive(status);
+        }
+        void ToggleEquipment(bool status)
+        {
+            Resources.Equipment.SetActive(status);
+        }
+        void ToggleLoading(bool status) {
+            Resources.LoadingScreen.SetActive(status);
         }
     } 
 }

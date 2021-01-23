@@ -12,7 +12,7 @@ namespace RPG.Animation.Base
         Bow
     }
     [System.Serializable]
-    public class SetClip {
+    public struct SetClip {
         public AnimationClip Idle;
         public AnimationClip Walk;
         public AnimationClip Run;
@@ -20,9 +20,16 @@ namespace RPG.Animation.Base
     }
 
     [System.Serializable]
-    public class AnimationSet {
+    public struct AnimationSet {
         public IAnimationType Type;
         public SetClip Clips;
+    }
+
+    [System.Serializable]
+    public struct ParticleSet {
+        public IAnimationType Type;
+        public ParticleSystem Particle;
+        public float DelayPercent;
     }
     public class AnimationData : MonoBehaviour
     {

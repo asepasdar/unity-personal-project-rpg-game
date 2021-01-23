@@ -5,7 +5,7 @@ using UnityEngine;
 namespace RPG.Stats.Base
 {
     [System.Serializable]
-    public class Stats
+    public struct Stats
     {
         public BaseValue BaseHealth;
         public BaseValue BaseDamage;

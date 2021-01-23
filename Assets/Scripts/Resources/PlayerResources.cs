@@ -9,8 +9,8 @@ namespace RPG.Resources.Player
         public Transform WeaponPosition;
         public Transform ShieldPosition;
 
-        [Header("Health Settings")]
+        [Header("Canvas Battle")]
         public Transform HealthUICanvas;
-        public GameObject HealthBarPrefab;
+        public Transform DamageUICanvas;
     }
 }

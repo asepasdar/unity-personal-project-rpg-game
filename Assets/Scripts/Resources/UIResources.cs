@@ -9,8 +9,10 @@ namespace RPG.Resources.UI
 
         [Header("Default UI Objects")]
         public List<GameObject> Default;
-        [Header("Inventory UI Objects")]
-        public List<GameObject> Inventory;
 
+        [Header("Inventory UI Objects")]
+        public GameObject Inventory;
+        public GameObject ItemInfo;
+        public GameObject Equipment;
     }
 }
